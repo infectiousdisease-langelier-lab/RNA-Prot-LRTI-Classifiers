@@ -60,24 +60,17 @@ microbe_reports_bgfilter <- read.csv(
   file.path(raw_data_dir, "microbe_reports_bgfilter.csv"),
   stringsAsFactors=F
 ) %>%
-  filter(
-    sample_name %in% metadata_df_with_folds$sample_name
+  filter(sample_name %in% metadata_df_with_folds$sample_name
   )
 
-# Import metadata with mNGS hits
-metadata_with_mNGS <- read.csv(
-  file.path(
-    raw_data_dir,
-    "metadata_JCI_mNGS_hits_added_06122026.csv"
-  ),
-  stringsAsFactors=F
-)
 
 # Import protein matrix
 protein_mat <- read.csv(
   file.path(prot_data_dir, "protein_mat.csv"),
   stringsAsFactors=F
 )
+
+names(protein_mat)[1] <- "sample_name"
 
 
 
@@ -160,25 +153,13 @@ build_ifn_score <- function(rpm_df) {
 
     # Protein
     protein_mat %>%
-      { colnames(.)[1] <- "patient_id"; . } %>%
-      mutate(
-        patient_id=as.integer(patient_id)
-      ) %>%
       pivot_longer(
-        cols=-patient_id,
+        cols=-sample_name,
         names_to="gene_symbol",
         values_to="expr_log2"
       ) %>%
       filter(
         gene_symbol %in% hallmark_ifn_genes
-      ) %>%
-      left_join(
-        metadata_df_with_folds %>%
-          dplyr::select(
-            patient_id,
-            sample_name
-          ),
-        by="patient_id"
       ) %>%
       group_by(gene_symbol) %>%
       mutate(
@@ -245,25 +226,13 @@ build_ifn_score_shared <- function(rpm_df) {
 
     # Protein
     protein_mat %>%
-      { colnames(.)[1] <- "patient_id"; . } %>%
-      mutate(
-        patient_id=as.integer(patient_id)
-      ) %>%
       pivot_longer(
-        cols=-patient_id,
+        cols=-sample_name,
         names_to="gene_symbol",
         values_to="expr_log2"
       ) %>%
       filter(
         gene_symbol %in% hallmark_ifn_genes_shared
-      ) %>%
-      left_join(
-        metadata_df_with_folds %>%
-          dplyr::select(
-            patient_id,
-            sample_name
-          ),
-        by="patient_id"
       ) %>%
       group_by(gene_symbol) %>%
       mutate(
@@ -553,7 +522,7 @@ build_pathogen_rpm <- function(
       LRTI_adjudication=="Definite"
     ) %>%
     dplyr::select(
-      sanitized_name,
+      sample_name,
       starts_with(pathogen_prefix)
     ) %>%
     pivot_longer(
@@ -565,7 +534,7 @@ build_pathogen_rpm <- function(
       pathogen != ""
     ) %>%
     dplyr::select(
-      sanitized_name,
+      sample_name,
       pathogen
     ) %>%
     distinct()
@@ -596,13 +565,13 @@ build_pathogen_rpm <- function(
   candidate_rows <- report_df %>%
     filter(
       category %in% report_category,
-      sample_name %in% sample_pathogen_map$sanitized_name
+      sample_name %in% sample_pathogen_map$sample_name
     )
 
   matched_rows <- sample_pathogen_map %>%
     left_join(
       candidate_rows,
-      by=c("sanitized_name"="sample_name"),
+      by=c("sample_name"="sample_name"),
       relationship="many-to-many"
     ) %>%
     filter(
@@ -619,7 +588,7 @@ build_pathogen_rpm <- function(
   unmatched <- sample_pathogen_map %>%
     anti_join(
       matched_rows,
-      by=c("sanitized_name", "pathogen")
+      by=c("sample_name", "pathogen")
     )
 
   if (nrow(unmatched) > 0) {
@@ -632,17 +601,17 @@ build_pathogen_rpm <- function(
 
   matched_rows %>%
     distinct(
-      sanitized_name,
+      sample_name,
       name,
       nt_rpm
     ) %>%
-    group_by(sanitized_name) %>%
+    group_by(sample_name) %>%
     summarize(
       rpm=sum(nt_rpm, na.rm=TRUE),
       .groups="drop"
     ) %>%
     dplyr::rename(
-      sample_name=sanitized_name
+      sample_name=sample_name
     )
 }
 
@@ -663,7 +632,7 @@ virus_synonyms <- list(
 )
 
 viral_all_hits <- build_pathogen_rpm(
-  metadata_df=metadata_with_mNGS,
+  metadata_df=metadata_df_with_folds,
   pathogen_prefix="JCI_virus_",
   report_df=microbe_reports_bgfilter,
   report_category="viruses",
@@ -842,25 +811,13 @@ build_neut_score <- function(rpm_df) {
 
     # Protein
     protein_mat %>%
-      { colnames(.)[1] <- "patient_id"; . } %>%
-      mutate(
-        patient_id=as.integer(patient_id)
-      ) %>%
       pivot_longer(
-        cols=-patient_id,
+        cols=-sample_name,
         names_to="gene_symbol",
         values_to="expr_log2"
       ) %>%
       filter(
         gene_symbol %in% hallmark_neut_genes
-      ) %>%
-      left_join(
-        metadata_df_with_folds %>%
-          dplyr::select(
-            patient_id,
-            sample_name
-          ),
-        by="patient_id"
       ) %>%
       group_by(gene_symbol) %>%
       mutate(
@@ -1146,7 +1103,7 @@ make_neut_plot <- function(
 
 
 bacterial_all_hits <- build_pathogen_rpm(
-  metadata_df=metadata_with_mNGS,
+  metadata_df=metadata_df_with_folds,
   pathogen_prefix="JCI_BF_",
   report_df=microbe_reports_bgfilter,
   report_category="bacteria"
@@ -1245,16 +1202,12 @@ antibacterial_df <- bind_rows(
 
   # Protein
   protein_mat %>%
-    { colnames(.)[1] <- "patient_id"; . } %>%
-    mutate(
-      patient_id=as.integer(patient_id)
-    ) %>%
     dplyr::select(
-      patient_id,
+      sample_name,
       all_of(antibacterial_genes)
     ) %>%
     pivot_longer(
-      cols=-patient_id,
+      cols=-sample_name,
       names_to="gene_symbol",
       values_to="expr_log2"
     ) %>%
@@ -1263,14 +1216,6 @@ antibacterial_df <- bind_rows(
       expr_scaled=as.numeric(scale(expr_log2))
     ) %>%
     ungroup() %>%
-    left_join(
-      metadata_df_with_folds %>%
-        dplyr::select(
-          patient_id,
-          sample_name
-        ),
-      by="patient_id"
-    ) %>%
     mutate(
       modality="Protein"
     ) %>%

@@ -1,106 +1,106 @@
-"sample_name","patient_id","sex","age_in_years","LRTI_adjudication","is_water","batch","nonhost_reads","fold"
-"P2",1027440,"Male",0.15,"Definite",FALSE,"VAP_3",154936,5
-"P5",1028330,"Male",2.19,"Definite",FALSE,"OPS016",113168,4
-"P6",1028513,"Female",16.37,"Definite",FALSE,"VAP_3",682148,4
-"P8",1028901,"Male",0.86,"Definite",FALSE,"VAP_3",1916364,4
-"P11",1029433,"Female",0.2,"Definite",FALSE,"VAP_3",165220,3
-"P14",1029713,"Female",9.55,"No Evidence",FALSE,"VAP_3",370444,1
-"P16",1029999,"Male",16.37,"Definite",FALSE,"VAP_3",429868,5
-"P17",1030069,"Male",0.73,"Definite",FALSE,"VAP_3",159322,5
-"P19",1030071,"Male",11.34,"No Evidence",FALSE,"VAP_3",23460,4
-"P22",1030846,"Female",4.9,"Definite",FALSE,"VAP_9",1319382,2
-"P25",1031599,"Male",13.21,"No Evidence",FALSE,"VAP_9",195506,3
-"P27",1031961,"Male",6.85,"No Evidence",FALSE,"OPS016",8218,5
-"P34",1035754,"Female",9.51,"No Evidence",FALSE,"OPS_007",2528,2
-"P41",1036236,"Male",0.11,"Definite",FALSE,"OPS_003",10468,5
-"P42",1036315,"Male",12.34,"No Evidence",FALSE,"VAP_4",69410,5
-"P43",1036343,"Female",1.28,"No Evidence",FALSE,"VAP_4",8938738,5
-"P45",1036430,"Male",10.01,"Definite",FALSE,"OPS_003",123880,5
-"P47",1036576,"Male",0.1,"Definite",FALSE,"OPS_001",400232,4
-"P48",1036592,"Female",0.11,"Definite",FALSE,"OPS_001",117860,4
-"P52",1036760,"Female",3.27,"Definite",FALSE,"VAP_4",6258815,1
-"P53",1036793,"Female",0.15,"Definite",FALSE,"OPS_001",228188,4
-"P54",1036803,"Female",0.21,"Definite",FALSE,"OPS_001",32142,5
-"P55",1036820,"Male",0.15,"Definite",FALSE,"OPS_001",158872,2
-"P57",1037041,"Male",13.38,"Definite",FALSE,"OPS_003",5750,1
-"P64",1037463,"Male",1.14,"Definite",FALSE,"OPS_003",132480,3
-"P65",1037465,"Female",0.2,"Definite",FALSE,"OPS_001",3890173,1
-"P69",1037642,"Female",0.75,"Definite",FALSE,"OPS_003",5194,5
-"P71",1037715,"Male",0.8,"Definite",FALSE,"VAP_2019",135392,3
-"P75",1037914,"Male",0.19,"No Evidence",FALSE,"VAP_8",67716,2
-"P76",1037929,"Female",3.52,"No Evidence",FALSE,"OPS_054",103438,1
-"P77",1038017,"Male",0.86,"Definite",FALSE,"OPS_003",62528,4
-"P78",1038088,"Female",0.19,"Definite",FALSE,"OPS_001",334532,3
-"P79",1038111,"Male",0.23,"Definite",FALSE,"VAP_8",60918,1
-"P80",1038134,"Male",4.85,"Definite",FALSE,"OPS_001",28972,2
-"P81",1038237,"Male",9.88,"Definite",FALSE,"OPS_001",135050,1
-"P84",1038325,"Female",11.18,"No Evidence",FALSE,"OPS_001",24960,2
-"P85",1038363,"Female",10.26,"No Evidence",FALSE,"VAP_9",4910,1
-"P86",1038385,"Female",0.13,"Definite",FALSE,"OPS_003",32036,2
-"P87",1038457,"Male",0.18,"Definite",FALSE,"OPS_003",191930,5
-"P88",1038460,"Female",1.27,"No Evidence",FALSE,"VAP_7",3480,3
-"P91",1038522,"Male",0.15,"Definite",FALSE,"OPS_003",94988,3
-"P92",1038572,"Female",15.59,"No Evidence",FALSE,"OPS_001",102998,1
-"P93",1038574,"Male",0.17,"Definite",FALSE,"OPS_003",111064,4
-"P97",1038626,"Female",0.15,"Definite",FALSE,"OPS_003",179900,3
-"P100",1038853,"Male",7.66,"Definite",FALSE,"OPS_003",106778,4
-"P103",1038972,"Female",14.8,"Definite",FALSE,"VAP_2019",1545612,3
-"P104",1039024,"Male",3.18,"No Evidence",FALSE,"VAP_6",6428,4
-"P106",1039073,"Male",0.29,"Definite",FALSE,"OPS_003",322316,2
-"P108",1039086,"Female",0.82,"No Evidence",FALSE,"VAP_9",8802,4
-"P115",1039467,"Male",0.1,"Definite",FALSE,"OPS_003",323354,3
-"P116",1039501,"Female",10.64,"No Evidence",FALSE,"VAP_6",17022,1
-"P117",1039597,"Female",5.93,"Definite",FALSE,"OPS_001",123192,4
-"P121",1039815,"Male",0.26,"Definite",FALSE,"VAP_9",129074,1
-"P122",1039847,"Male",0.88,"No Evidence",FALSE,"VAP_8",624108,3
-"P124",1039906,"Male",0.24,"Definite",FALSE,"VAP_9",35106,4
-"P125",1040001,"Female",2.03,"No Evidence",FALSE,"OPS_007",81954,2
-"P129",1040202,"Male",0.14,"Definite",FALSE,"OPS_003",63860,1
-"P130",1040253,"Male",16.24,"Definite",FALSE,"OPS_003",8314,1
-"P132",1040356,"Male",0.43,"Definite",FALSE,"OPS_001",634672,5
-"P135",1040644,"Male",0.26,"Definite",FALSE,"VAP_8",1042410,2
-"P136",1040777,"Male",0.09,"Definite",FALSE,"VAP_2019",122994,5
-"P137",1040831,"Female",0.13,"Definite",FALSE,"VAP_2019",87866,2
-"P139",1041018,"Female",1.72,"Definite",FALSE,"VAP_2019",22318,1
-"P140",1041101,"Male",0.22,"Definite",FALSE,"OPS_003",65320,3
-"P141",1041169,"Male",0.24,"No Evidence",FALSE,"VAP_6",535270,5
-"P148",1041537,"Female",0.09,"Definite",FALSE,"VAP_2019",8502,3
-"P152",1041666,"Female",15.11,"No Evidence",FALSE,"VAP_9",47090,4
-"P156",1042126,"Male",3.17,"Definite",FALSE,"VAP_9",202304,1
-"P157",1042248,"Male",0.47,"Definite",FALSE,"VAP_2019",12588,1
-"P158",1042351,"Male",15.7,"Definite",FALSE,"VAP_2019",223910,4
-"P166",1042726,"Male",0.53,"No Evidence",FALSE,"OPS_001",16484,4
-"P171",1043215,"Male",1.49,"No Evidence",FALSE,"VAP_8",6152,5
-"P172",1043273,"Female",14.02,"No Evidence",FALSE,"OPS_054",1483444,2
-"P173",1043274,"Female",14.35,"No Evidence",FALSE,"VAP_9",23154,3
-"P177",1043806,"Female",0.39,"No Evidence",FALSE,"OPS_006",27316,3
-"P182",1043986,"Female",2.74,"No Evidence",FALSE,"OPS_006",23462,3
-"P185",1044367,"Male",4.45,"Definite",FALSE,"VAP_9",73148,2
-"P189",1044647,"Male",0.54,"Definite",FALSE,"OPS_007",70950,5
-"P195",1045173,"Female",0.71,"Definite",FALSE,"OPS_006",17824,2
-"P196",1045378,"Male",2.39,"No Evidence",FALSE,"OPS_006",75280,4
-"P202",1045787,"Male",5.32,"No Evidence",FALSE,"OPS_006",160158,2
-"P206",1046096,"Female",1.11,"Definite",FALSE,"OPS_006",22060,1
-"P208",1046244,"Female",0.96,"No Evidence",FALSE,"OPS_007",159266,1
-"P209",1046274,"Female",3.2,"Definite",FALSE,"OPS_006",38630,2
-"P210",1046408,"Female",0.21,"Definite",FALSE,"OPS_007",55924,1
-"P214",1046750,"Female",1.12,"Definite",FALSE,"OPS_007",8712,5
-"P216",1046843,"Female",0.27,"Definite",FALSE,"OPS_006",11402,4
-"P218",1046991,"Male",0.49,"Definite",FALSE,"OPS_006",15986,3
-"P220",1047103,"Male",2.9,"Definite",FALSE,"OPS_006",451702,3
-"P222",1047141,"Male",8.81,"No Evidence",FALSE,"OPS_007",208816,5
-"P223",1047399,"Male",7.63,"Definite",FALSE,"OPS_006",13554,3
-"P225",1047433,"Male",0.42,"Definite",FALSE,"OPS_006",491800,2
-"P226",1047464,"Male",1.68,"No Evidence",FALSE,"OPS_006",26578,3
-"P227",1047479,"Male",0.19,"Definite",FALSE,"OPS_007",21784,3
-"P231",1047591,"Male",2.39,"Definite",FALSE,"OPS_007",538386,5
-"P237",1047963,"Male",12.52,"No Evidence",FALSE,"OPS_007",31350,1
-"P240",1048039,"Male",1.14,"Definite",FALSE,"OPS_007",7432,2
-"P241",1048063,"Female",0.91,"Definite",FALSE,"OPS_007",4408,1
-"P243",1048262,"Male",16.27,"No Evidence",FALSE,"OPS_007",26904,2
-"P244",1048263,"Male",0.59,"Definite",FALSE,"OPS_007",87266,4
-"P249",1048897,"Male",4.08,"Definite",FALSE,"OPS_007",163968,1
-"P252",1049050,"Female",0.54,"Definite",FALSE,"OPS_007",19376,2
-"P253",1049211,"Male",1.88,"Definite",FALSE,"OPS_007",40370,2
-"P259",1049867,"Female",4.24,"Definite",FALSE,"OPS_007",26080,5
-"P260",1050020,"Male",0.1,"Definite",FALSE,"OPS_007",68936,2
+"sample_name","sex","age_in_years","LRTI_adjudication","JCI_virus_1","JCI_virus_2","JCI_virus_3","JCI_BF_1","JCI_BF_2","fold"
+"P2","Male",0.15,"Definite","","","","Staphylococcus aureus","",5
+"P5","Male",2.19,"Definite","Human orthopneumovirus","Rhinovirus A","","","",4
+"P6","Female",16.37,"Definite","Human rubulavirus 4","Human coronavirus NL63","","","",4
+"P8","Male",0.86,"Definite","Human orthopneumovirus","","","Haemophilus influenzae","",4
+"P11","Female",0.2,"Definite","Human orthopneumovirus","","","Pneumocystis jirovecii","",3
+"P14","Female",9.55,"No Evidence","","","","","",1
+"P16","Male",16.37,"Definite","Rhinovirus A","","","","",5
+"P17","Male",0.73,"Definite","Human orthopneumovirus","","","Streptococcus pneumoniae","",5
+"P19","Male",11.34,"No Evidence","","","","","",4
+"P22","Female",4.9,"Definite","Rhinovirus A","","","Moraxella catarrhalis","",2
+"P25","Male",13.21,"No Evidence","","","","","",3
+"P27","Male",6.85,"No Evidence","","","","","",5
+"P34","Female",9.51,"No Evidence","","","","Escherichia coli","",2
+"P41","Male",0.11,"Definite","Human orthopneumovirus","","","Haemophilus influenzae","",5
+"P42","Male",12.34,"No Evidence","","","","","",5
+"P43","Female",1.28,"No Evidence","","","","Haemophilus influenzae","",5
+"P45","Male",10.01,"Definite","","","","Moraxella catarrhalis","Haemophilus influenzae",5
+"P47","Male",0.1,"Definite","Human orthopneumovirus","","","Moraxella catarrhalis","",4
+"P48","Female",0.11,"Definite","Human orthopneumovirus","","","","",4
+"P52","Female",3.27,"Definite","Human orthopneumovirus","","","Moraxella catarrhalis","",1
+"P53","Female",0.15,"Definite","Human orthopneumovirus","Betacoronavirus 1","","","",4
+"P54","Female",0.21,"Definite","Human orthopneumovirus","","","Haemophilus influenzae","Moraxella catarrhalis",5
+"P55","Male",0.15,"Definite","Human orthopneumovirus","","","Haemophilus influenzae","",2
+"P57","Male",13.38,"Definite","","","","Streptococcus pneumoniae","",1
+"P64","Male",1.14,"Definite","Human orthopneumovirus","","","Haemophilus influenzae","",3
+"P65","Female",0.2,"Definite","Human orthopneumovirus","","","Haemophilus influenzae","",1
+"P69","Female",0.75,"Definite","Human orthopneumovirus","","","Haemophilus influenzae","",5
+"P71","Male",0.8,"Definite","Human orthopneumovirus","Human rubulavirus 2","","Haemophilus influenzae","",3
+"P75","Male",0.19,"No Evidence","Human orthopneumovirus","","","","",2
+"P76","Female",3.52,"No Evidence","","","","Pseudomonas aeruginosa","",1
+"P77","Male",0.86,"Definite","Human orthopneumovirus","Rhinovirus A","","","",4
+"P78","Female",0.19,"Definite","Human orthopneumovirus","","","Streptococcus pneumoniae","",3
+"P79","Male",0.23,"Definite","Human orthopneumovirus","","","Haemophilus influenzae","",1
+"P80","Male",4.85,"Definite","Influenza A virus","","","","",2
+"P81","Male",9.88,"Definite","Influenza A virus","","","","",1
+"P84","Female",11.18,"No Evidence","","","","","",2
+"P85","Female",10.26,"No Evidence","","","","","",1
+"P86","Female",0.13,"Definite","Rhinovirus A","","","","",2
+"P87","Male",0.18,"Definite","Human orthopneumovirus","","","Moraxella catarrhalis","",5
+"P88","Female",1.27,"No Evidence","","","","","",3
+"P91","Male",0.15,"Definite","Human orthopneumovirus","","","Moraxella catarrhalis","",3
+"P92","Female",15.59,"No Evidence","","","","","",1
+"P93","Male",0.17,"Definite","Human orthopneumovirus","Betacoronavirus 1","Human metapneumovirus","Haemophilus influenzae","",4
+"P97","Female",0.15,"Definite","Human orthopneumovirus","","","Moraxella catarrhalis","",3
+"P100","Male",7.66,"Definite","Influenza A virus","","","","",4
+"P103","Female",14.8,"Definite","Human metapneumovirus","","","","",3
+"P104","Male",3.18,"No Evidence","","","","Haemophilus influenzae","",4
+"P106","Male",0.29,"Definite","Human orthopneumovirus","","","","",2
+"P108","Female",0.82,"No Evidence","","","","","",4
+"P115","Male",0.1,"Definite","Human orthopneumovirus","","","Moraxella catarrhalis","",3
+"P116","Female",10.64,"No Evidence","","","","","",1
+"P117","Female",5.93,"Definite","Rhinovirus C","","","","",4
+"P121","Male",0.26,"Definite","Human orthopneumovirus","","","Haemophilus influenzae","",1
+"P122","Male",0.88,"No Evidence","","","","","",3
+"P124","Male",0.24,"Definite","Human coronavirus 229E","","","","",4
+"P125","Female",2.03,"No Evidence","","","","Haemophilus influenzae","",2
+"P129","Male",0.14,"Definite","Human orthopneumovirus","Human respirovirus 3","","Moraxella catarrhalis","",1
+"P130","Male",16.24,"Definite","","","","","",1
+"P132","Male",0.43,"Definite","Influenza B virus","","","Moraxella catarrhalis","",5
+"P135","Male",0.26,"Definite","Rhinovirus A","","","Haemophilus influenzae","",2
+"P136","Male",0.09,"Definite","Human orthopneumovirus","","","","",5
+"P137","Female",0.13,"Definite","Human orthopneumovirus","","","Moraxella catarrhalis","",2
+"P139","Female",1.72,"Definite","Human orthopneumovirus","","","","",1
+"P140","Male",0.22,"Definite","Human orthopneumovirus","","","Streptococcus pneumoniae","",3
+"P141","Male",0.24,"No Evidence","","","","Moraxella catarrhalis","",5
+"P148","Female",0.09,"Definite","","","","Haemophilus influenzae","",3
+"P152","Female",15.11,"No Evidence","","","","","",4
+"P156","Male",3.17,"Definite","Human mastadenovirus C","Rhinovirus A","","","",1
+"P157","Male",0.47,"Definite","","","","Moraxella catarrhalis","",1
+"P158","Male",15.7,"Definite","Human respirovirus 3","","","Haemophilus influenzae","",4
+"P166","Male",0.53,"No Evidence","","","","Staphylococcus aureus","",4
+"P171","Male",1.49,"No Evidence","","","","","",5
+"P172","Female",14.02,"No Evidence","","","","","",2
+"P173","Female",14.35,"No Evidence","","","","","",3
+"P177","Female",0.39,"No Evidence","","","","","",3
+"P182","Female",2.74,"No Evidence","Rhinovirus C","","","Haemophilus influenzae","",3
+"P185","Male",4.45,"Definite","","","","Stenotrophomonas maltophilia","Streptococcus pneumoniae",2
+"P189","Male",0.54,"Definite","Human betaherpesvirus 5","","","Staphylococcus aureus","",5
+"P195","Female",0.71,"Definite","","","","","",2
+"P196","Male",2.39,"No Evidence","Rhinovirus A","","","","",4
+"P202","Male",5.32,"No Evidence","","","","","",2
+"P206","Female",1.11,"Definite","Human orthopneumovirus","","","","",1
+"P208","Female",0.96,"No Evidence","","","","","",1
+"P209","Female",3.2,"Definite","Human rubulavirus 4","","","Haemophilus influenzae","",2
+"P210","Female",0.21,"Definite","Human orthopneumovirus","","","","",1
+"P214","Female",1.12,"Definite","Human metapneumovirus","","","Escherichia coli","",5
+"P216","Female",0.27,"Definite","Human orthopneumovirus","","","Haemophilus influenzae","",4
+"P218","Male",0.49,"Definite","","","","","",3
+"P220","Male",2.9,"Definite","Human orthopneumovirus","","","Haemophilus influenzae","",3
+"P222","Male",8.81,"No Evidence","","","","Pseudomonas aeruginosa","",5
+"P223","Male",7.63,"Definite","Human orthopneumovirus","","","","",3
+"P225","Male",0.42,"Definite","","","","Haemophilus influenzae","",2
+"P226","Male",1.68,"No Evidence","Rhinovirus A","","","Moraxella catarrhalis","Haemophilus influenzae",3
+"P227","Male",0.19,"Definite","Human orthopneumovirus","","","Haemophilus influenzae","",3
+"P231","Male",2.39,"Definite","Human orthopneumovirus","","","Moraxella catarrhalis","",5
+"P237","Male",12.52,"No Evidence","","","","Moraxella catarrhalis","",1
+"P240","Male",1.14,"Definite","Human metapneumovirus","","","","",2
+"P241","Female",0.91,"Definite","Human orthopneumovirus","Human respirovirus 1","","Haemophilus influenzae","",1
+"P243","Male",16.27,"No Evidence","","","","","",2
+"P244","Male",0.59,"Definite","Human orthopneumovirus","","","Moraxella catarrhalis","",4
+"P249","Male",4.08,"Definite","Human orthopneumovirus","","","","",1
+"P252","Female",0.54,"Definite","Human orthopneumovirus","","","","",2
+"P253","Male",1.88,"Definite","Human orthopneumovirus","Human respirovirus 1","","Haemophilus influenzae","",2
+"P259","Female",4.24,"Definite","Human rubulavirus 4","","","Pneumocystis jirovecii","",5
+"P260","Male",0.1,"Definite","Human orthopneumovirus","","","","",2

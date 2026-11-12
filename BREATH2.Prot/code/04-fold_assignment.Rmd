@@ -47,26 +47,26 @@ while (!folds_ok) {
 
   # Stratified vfold_cv using rsample
   vfold_obj <- vfold_cv(
-    data = patient_info,
+    data = metadata_df,
     v = nfolds,
     strata = "LRTI_adjudication"
   )
 
   # Create a data frame that maps each row to a fold
-  patient_info_with_folds <- patient_info %>%
+  metadata_df_with_folds <- metadata_df %>%
     mutate(fold = NA_integer_)
 
   # Fill in fold assignments
   for (i in seq_len(nfolds)) {
     fold_indices <- vfold_obj$splits[[i]]$in_id
-    val_indices <- setdiff(seq_len(nrow(patient_info)), fold_indices)
-    patient_info_with_folds$fold[val_indices] <- i
+    val_indices <- setdiff(seq_len(nrow(metadata_df)), fold_indices)
+    metadata_df_with_folds$fold[val_indices] <- i
   }
 
   # Check how many No Evidence cases per fold
   counts <- table(
-    patient_info_with_folds$fold,
-    patient_info_with_folds$LRTI_adjudication
+    metadata_df_with_folds$fold,
+    metadata_df_with_folds$LRTI_adjudication
   )
 
   if (all(counts[, "No Evidence"] >= min_NE_per_fold)) {
@@ -76,8 +76,8 @@ while (!folds_ok) {
 
 # Save output
 write.csv(
-  patient_info_with_folds,
-  file.path(prot_data_dir, "patient_info_with_folds.csv"),
+  metadata_df_with_folds,
+  file.path(prot_data_dir, "metadata_df_with_folds.csv"),
   row.names=F
 )
 
@@ -90,9 +90,9 @@ write.csv(
 
 
 stopifnot(
-  !any(is.na(patient_info_with_folds$fold)),
+  !any(is.na(metadata_df_with_folds$fold)),
   all(counts[, "No Evidence"] >= min_NE_per_fold),
-  nrow(patient_info_with_folds) == nrow(patient_info)
+  nrow(metadata_df_with_folds) == nrow(metadata_df)
 )
 
 

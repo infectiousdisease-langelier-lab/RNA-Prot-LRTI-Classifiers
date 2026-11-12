@@ -1,106 +1,106 @@
-"patient_id","LRTI_adjudication","pred"
-"1029713","No Evidence",0.0862
-"1036760","Definite",0.977
-"1037041","Definite",0.7142
-"1037465","Definite",0.9999
-"1037929","No Evidence",0.1286
-"1038111","Definite",0.554
-"1038237","Definite",0.8225
-"1038363","No Evidence",0.3467
-"1038572","No Evidence",0.1091
-"1039501","No Evidence",0.0835
-"1039815","Definite",0.9964
-"1040202","Definite",1
-"1040253","Definite",0.7744
-"1041018","Definite",0.9758
-"1042126","Definite",0.967
-"1042248","Definite",0.9695
-"1046096","Definite",0.8909
-"1046244","No Evidence",0.1401
-"1046408","Definite",1
-"1047963","No Evidence",0.3042
-"1048063","Definite",0.9944
-"1048897","Definite",0.958
-"1030846","Definite",0.8518
-"1035754","No Evidence",0.3999
-"1036820","Definite",0.9991
-"1037914","No Evidence",0.966
-"1038134","Definite",0.79
-"1038325","No Evidence",0.116
-"1038385","Definite",0.9643
-"1039073","Definite",0.9814
-"1040001","No Evidence",0.9937
-"1040644","Definite",0.8764
-"1040831","Definite",0.995
-"1043273","No Evidence",0.2372
-"1044367","Definite",0.3913
-"1045173","Definite",0.4444
-"1045787","No Evidence",0.0727
-"1046274","Definite",0.9909
-"1047433","Definite",0.9997
-"1048039","Definite",0.9951
-"1048262","No Evidence",0.5286
-"1049050","Definite",0.9999
-"1049211","Definite",0.9997
-"1050020","Definite",0.9997
-"1029433","Definite",0.9917
-"1031599","No Evidence",0.1223
-"1037463","Definite",0.9948
-"1037715","Definite",0.8918
-"1038088","Definite",0.9953
-"1038460","No Evidence",0.3505
-"1038522","Definite",0.949
-"1038626","Definite",0.9925
-"1038972","Definite",0.9668
-"1039467","Definite",0.9922
-"1039847","No Evidence",0.1483
-"1041101","Definite",0.9762
-"1041537","Definite",0.7103
-"1043274","No Evidence",0.0548
-"1043806","No Evidence",0.4185
-"1043986","No Evidence",0.2218
-"1046991","Definite",0.181
-"1047103","Definite",0.8105
-"1047399","Definite",0.803
-"1047464","No Evidence",0.3681
-"1047479","Definite",0.9971
-"1028330","Definite",0.9779
-"1028513","Definite",0.3044
-"1028901","Definite",0.9368
-"1030071","No Evidence",0.0266
-"1036576","Definite",0.9465
-"1036592","Definite",0.9998
-"1036793","Definite",0.554
-"1038017","Definite",0.9729
-"1038574","Definite",0.9735
-"1038853","Definite",0.7493
-"1039024","No Evidence",0.3393
-"1039086","No Evidence",0.1075
-"1039597","Definite",0.434
-"1039906","Definite",0.7725
-"1041666","No Evidence",0.5443
-"1042351","Definite",0.9895
-"1042726","No Evidence",0.4752
-"1045378","No Evidence",0.3378
-"1046843","Definite",0.9957
-"1048263","Definite",0.9076
-"1027440","Definite",0.468
-"1029999","Definite",0.5331
-"1030069","Definite",0.9602
-"1031961","No Evidence",0.8048
-"1036236","Definite",0.9956
-"1036315","No Evidence",0.009
-"1036343","No Evidence",0.1921
-"1036430","Definite",0.9038
-"1036803","Definite",0.8935
-"1037642","Definite",0.938
-"1038457","Definite",0.9068
-"1040356","Definite",0.7377
-"1040777","Definite",1
-"1041169","No Evidence",0.0247
-"1043215","No Evidence",0.2027
-"1044647","Definite",0.6277
-"1046750","Definite",0.799
-"1047141","No Evidence",0.7971
-"1047591","Definite",0.8416
-"1049867","Definite",0.4946
+"sample_name","LRTI_adjudication","pred"
+"P14","No Evidence",0.0862
+"P52","Definite",0.977
+"P57","Definite",0.7142
+"P65","Definite",0.9999
+"P76","No Evidence",0.1286
+"P79","Definite",0.554
+"P81","Definite",0.8225
+"P85","No Evidence",0.3467
+"P92","No Evidence",0.1091
+"P116","No Evidence",0.0835
+"P121","Definite",0.9964
+"P129","Definite",1
+"P130","Definite",0.7744
+"P139","Definite",0.9758
+"P156","Definite",0.967
+"P157","Definite",0.9695
+"P206","Definite",0.8909
+"P208","No Evidence",0.1401
+"P210","Definite",1
+"P237","No Evidence",0.3042
+"P241","Definite",0.9944
+"P249","Definite",0.958
+"P22","Definite",0.8518
+"P34","No Evidence",0.3999
+"P55","Definite",0.9991
+"P75","No Evidence",0.966
+"P80","Definite",0.79
+"P84","No Evidence",0.116
+"P86","Definite",0.9643
+"P106","Definite",0.9814
+"P125","No Evidence",0.9937
+"P135","Definite",0.8764
+"P137","Definite",0.995
+"P172","No Evidence",0.2372
+"P185","Definite",0.3913
+"P195","Definite",0.4444
+"P202","No Evidence",0.0727
+"P209","Definite",0.9909
+"P225","Definite",0.9997
+"P240","Definite",0.9951
+"P243","No Evidence",0.5286
+"P252","Definite",0.9999
+"P253","Definite",0.9997
+"P260","Definite",0.9997
+"P11","Definite",0.9917
+"P25","No Evidence",0.1223
+"P64","Definite",0.9948
+"P71","Definite",0.8918
+"P78","Definite",0.9953
+"P88","No Evidence",0.3505
+"P91","Definite",0.949
+"P97","Definite",0.9925
+"P103","Definite",0.9668
+"P115","Definite",0.9922
+"P122","No Evidence",0.1483
+"P140","Definite",0.9762
+"P148","Definite",0.7103
+"P173","No Evidence",0.0548
+"P177","No Evidence",0.4185
+"P182","No Evidence",0.2218
+"P218","Definite",0.181
+"P220","Definite",0.8105
+"P223","Definite",0.803
+"P226","No Evidence",0.3681
+"P227","Definite",0.9971
+"P5","Definite",0.9779
+"P6","Definite",0.3044
+"P8","Definite",0.9368
+"P19","No Evidence",0.0266
+"P47","Definite",0.9465
+"P48","Definite",0.9998
+"P53","Definite",0.554
+"P77","Definite",0.9729
+"P93","Definite",0.9735
+"P100","Definite",0.7493
+"P104","No Evidence",0.3393
+"P108","No Evidence",0.1075
+"P117","Definite",0.434
+"P124","Definite",0.7725
+"P152","No Evidence",0.5443
+"P158","Definite",0.9895
+"P166","No Evidence",0.4752
+"P196","No Evidence",0.3378
+"P216","Definite",0.9957
+"P244","Definite",0.9076
+"P2","Definite",0.468
+"P16","Definite",0.5331
+"P17","Definite",0.9602
+"P27","No Evidence",0.8048
+"P41","Definite",0.9956
+"P42","No Evidence",0.009
+"P43","No Evidence",0.1921
+"P45","Definite",0.9038
+"P54","Definite",0.8935
+"P69","Definite",0.938
+"P87","Definite",0.9068
+"P132","Definite",0.7377
+"P136","Definite",1
+"P141","No Evidence",0.0247
+"P171","No Evidence",0.2027
+"P189","Definite",0.6277
+"P214","Definite",0.799
+"P222","No Evidence",0.7971
+"P231","Definite",0.8416
+"P259","Definite",0.4946

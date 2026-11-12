@@ -1,0 +1,106 @@
+"sample_name","sex","age_in_years","LRTI_adjudication","JCI_virus_1","JCI_virus_2","JCI_virus_3","JCI_BF_1","JCI_BF_2","fold"
+"P2","Male",0.15,"Definite","","","","Staphylococcus aureus","",5
+"P5","Male",2.19,"Definite","Human orthopneumovirus","Rhinovirus A","","","",4
+"P6","Female",16.37,"Definite","Human rubulavirus 4","Human coronavirus NL63","","","",4
+"P8","Male",0.86,"Definite","Human orthopneumovirus","","","Haemophilus influenzae","",4
+"P11","Female",0.2,"Definite","Human orthopneumovirus","","","Pneumocystis jirovecii","",3
+"P14","Female",9.55,"No Evidence","","","","","",1
+"P16","Male",16.37,"Definite","Rhinovirus A","","","","",5
+"P17","Male",0.73,"Definite","Human orthopneumovirus","","","Streptococcus pneumoniae","",5
+"P19","Male",11.34,"No Evidence","","","","","",4
+"P22","Female",4.9,"Definite","Rhinovirus A","","","Moraxella catarrhalis","",2
+"P25","Male",13.21,"No Evidence","","","","","",3
+"P27","Male",6.85,"No Evidence","","","","","",5
+"P34","Female",9.51,"No Evidence","","","","Escherichia coli","",2
+"P41","Male",0.11,"Definite","Human orthopneumovirus","","","Haemophilus influenzae","",5
+"P42","Male",12.34,"No Evidence","","","","","",5
+"P43","Female",1.28,"No Evidence","","","","Haemophilus influenzae","",5
+"P45","Male",10.01,"Definite","","","","Moraxella catarrhalis","Haemophilus influenzae",5
+"P47","Male",0.1,"Definite","Human orthopneumovirus","","","Moraxella catarrhalis","",4
+"P48","Female",0.11,"Definite","Human orthopneumovirus","","","","",4
+"P52","Female",3.27,"Definite","Human orthopneumovirus","","","Moraxella catarrhalis","",1
+"P53","Female",0.15,"Definite","Human orthopneumovirus","Betacoronavirus 1","","","",4
+"P54","Female",0.21,"Definite","Human orthopneumovirus","","","Haemophilus influenzae","Moraxella catarrhalis",5
+"P55","Male",0.15,"Definite","Human orthopneumovirus","","","Haemophilus influenzae","",2
+"P57","Male",13.38,"Definite","","","","Streptococcus pneumoniae","",1
+"P64","Male",1.14,"Definite","Human orthopneumovirus","","","Haemophilus influenzae","",3
+"P65","Female",0.2,"Definite","Human orthopneumovirus","","","Haemophilus influenzae","",1
+"P69","Female",0.75,"Definite","Human orthopneumovirus","","","Haemophilus influenzae","",5
+"P71","Male",0.8,"Definite","Human orthopneumovirus","Human rubulavirus 2","","Haemophilus influenzae","",3
+"P75","Male",0.19,"No Evidence","Human orthopneumovirus","","","","",2
+"P76","Female",3.52,"No Evidence","","","","Pseudomonas aeruginosa","",1
+"P77","Male",0.86,"Definite","Human orthopneumovirus","Rhinovirus A","","","",4
+"P78","Female",0.19,"Definite","Human orthopneumovirus","","","Streptococcus pneumoniae","",3
+"P79","Male",0.23,"Definite","Human orthopneumovirus","","","Haemophilus influenzae","",1
+"P80","Male",4.85,"Definite","Influenza A virus","","","","",2
+"P81","Male",9.88,"Definite","Influenza A virus","","","","",1
+"P84","Female",11.18,"No Evidence","","","","","",2
+"P85","Female",10.26,"No Evidence","","","","","",1
+"P86","Female",0.13,"Definite","Rhinovirus A","","","","",2
+"P87","Male",0.18,"Definite","Human orthopneumovirus","","","Moraxella catarrhalis","",5
+"P88","Female",1.27,"No Evidence","","","","","",3
+"P91","Male",0.15,"Definite","Human orthopneumovirus","","","Moraxella catarrhalis","",3
+"P92","Female",15.59,"No Evidence","","","","","",1
+"P93","Male",0.17,"Definite","Human orthopneumovirus","Betacoronavirus 1","Human metapneumovirus","Haemophilus influenzae","",4
+"P97","Female",0.15,"Definite","Human orthopneumovirus","","","Moraxella catarrhalis","",3
+"P100","Male",7.66,"Definite","Influenza A virus","","","","",4
+"P103","Female",14.8,"Definite","Human metapneumovirus","","","","",3
+"P104","Male",3.18,"No Evidence","","","","Haemophilus influenzae","",4
+"P106","Male",0.29,"Definite","Human orthopneumovirus","","","","",2
+"P108","Female",0.82,"No Evidence","","","","","",4
+"P115","Male",0.1,"Definite","Human orthopneumovirus","","","Moraxella catarrhalis","",3
+"P116","Female",10.64,"No Evidence","","","","","",1
+"P117","Female",5.93,"Definite","Rhinovirus C","","","","",4
+"P121","Male",0.26,"Definite","Human orthopneumovirus","","","Haemophilus influenzae","",1
+"P122","Male",0.88,"No Evidence","","","","","",3
+"P124","Male",0.24,"Definite","Human coronavirus 229E","","","","",4
+"P125","Female",2.03,"No Evidence","","","","Haemophilus influenzae","",2
+"P129","Male",0.14,"Definite","Human orthopneumovirus","Human respirovirus 3","","Moraxella catarrhalis","",1
+"P130","Male",16.24,"Definite","","","","","",1
+"P132","Male",0.43,"Definite","Influenza B virus","","","Moraxella catarrhalis","",5
+"P135","Male",0.26,"Definite","Rhinovirus A","","","Haemophilus influenzae","",2
+"P136","Male",0.09,"Definite","Human orthopneumovirus","","","","",5
+"P137","Female",0.13,"Definite","Human orthopneumovirus","","","Moraxella catarrhalis","",2
+"P139","Female",1.72,"Definite","Human orthopneumovirus","","","","",1
+"P140","Male",0.22,"Definite","Human orthopneumovirus","","","Streptococcus pneumoniae","",3
+"P141","Male",0.24,"No Evidence","","","","Moraxella catarrhalis","",5
+"P148","Female",0.09,"Definite","","","","Haemophilus influenzae","",3
+"P152","Female",15.11,"No Evidence","","","","","",4
+"P156","Male",3.17,"Definite","Human mastadenovirus C","Rhinovirus A","","","",1
+"P157","Male",0.47,"Definite","","","","Moraxella catarrhalis","",1
+"P158","Male",15.7,"Definite","Human respirovirus 3","","","Haemophilus influenzae","",4
+"P166","Male",0.53,"No Evidence","","","","Staphylococcus aureus","",4
+"P171","Male",1.49,"No Evidence","","","","","",5
+"P172","Female",14.02,"No Evidence","","","","","",2
+"P173","Female",14.35,"No Evidence","","","","","",3
+"P177","Female",0.39,"No Evidence","","","","","",3
+"P182","Female",2.74,"No Evidence","Rhinovirus C","","","Haemophilus influenzae","",3
+"P185","Male",4.45,"Definite","","","","Stenotrophomonas maltophilia","Streptococcus pneumoniae",2
+"P189","Male",0.54,"Definite","Human betaherpesvirus 5","","","Staphylococcus aureus","",5
+"P195","Female",0.71,"Definite","","","","","",2
+"P196","Male",2.39,"No Evidence","Rhinovirus A","","","","",4
+"P202","Male",5.32,"No Evidence","","","","","",2
+"P206","Female",1.11,"Definite","Human orthopneumovirus","","","","",1
+"P208","Female",0.96,"No Evidence","","","","","",1
+"P209","Female",3.2,"Definite","Human rubulavirus 4","","","Haemophilus influenzae","",2
+"P210","Female",0.21,"Definite","Human orthopneumovirus","","","","",1
+"P214","Female",1.12,"Definite","Human metapneumovirus","","","Escherichia coli","",5
+"P216","Female",0.27,"Definite","Human orthopneumovirus","","","Haemophilus influenzae","",4
+"P218","Male",0.49,"Definite","","","","","",3
+"P220","Male",2.9,"Definite","Human orthopneumovirus","","","Haemophilus influenzae","",3
+"P222","Male",8.81,"No Evidence","","","","Pseudomonas aeruginosa","",5
+"P223","Male",7.63,"Definite","Human orthopneumovirus","","","","",3
+"P225","Male",0.42,"Definite","","","","Haemophilus influenzae","",2
+"P226","Male",1.68,"No Evidence","Rhinovirus A","","","Moraxella catarrhalis","Haemophilus influenzae",3
+"P227","Male",0.19,"Definite","Human orthopneumovirus","","","Haemophilus influenzae","",3
+"P231","Male",2.39,"Definite","Human orthopneumovirus","","","Moraxella catarrhalis","",5
+"P237","Male",12.52,"No Evidence","","","","Moraxella catarrhalis","",1
+"P240","Male",1.14,"Definite","Human metapneumovirus","","","","",2
+"P241","Female",0.91,"Definite","Human orthopneumovirus","Human respirovirus 1","","Haemophilus influenzae","",1
+"P243","Male",16.27,"No Evidence","","","","","",2
+"P244","Male",0.59,"Definite","Human orthopneumovirus","","","Moraxella catarrhalis","",4
+"P249","Male",4.08,"Definite","Human orthopneumovirus","","","","",1
+"P252","Female",0.54,"Definite","Human orthopneumovirus","","","","",2
+"P253","Male",1.88,"Definite","Human orthopneumovirus","Human respirovirus 1","","Haemophilus influenzae","",2
+"P259","Female",4.24,"Definite","Human rubulavirus 4","","","Pneumocystis jirovecii","",5
+"P260","Male",0.1,"Definite","Human orthopneumovirus","","","","",2

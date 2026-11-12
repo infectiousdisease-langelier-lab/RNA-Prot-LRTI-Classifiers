@@ -22,72 +22,22 @@ source("../../00-constants.R")
 
 
 # Import metadata
-metadata_df_ALL <- read.csv(
-  file.path(raw_data_dir, "sample_metadata.csv"),
-  stringsAsFactors=F)
-
-JCI_expanded_metadata <- read.csv(
-  file.path(raw_data_dir, "fixed_metadata_10242025.csv"),
-  stringsAsFactors=F)
-
-# Import patient IDs from proteomics file
-protein_patient_ids <- read.csv(
-  file.path(raw_data_dir, "vap_soma_normalized.csv"),
-  stringsAsFactors=F) %>%
-  dplyr::select(patient_id) %>%
-  dplyr::pull(patient_id)
+metadata_df <- read.csv(
+  file.path(prot_data_dir, "metadata_df.csv"),
+  stringsAsFactors=F
+)
 
 
 
 
 
 
-# 1.2. Ready metadata table for LASSO
-
-
-# Include only patients with both transcriptomic and proteomic data
-patients_vector <- intersect(
-  protein_patient_ids,
-  JCI_expanded_metadata$SubjectID)
-
-# Subset metadata to matched patients
-Meta.Data <- JCI_expanded_metadata %>%
-  filter(SubjectID %in% patients_vector)
-
-# Ensure ordering matches patient vector
-Meta.Data <- Meta.Data[match(patients_vector, Meta.Data$SubjectID), ]
-
-# Build patient info table
-patient_info_ALL <- data.frame(
-  sample_name = Meta.Data$sanitized_name,
-  patient_id = Meta.Data$SubjectID,
-  sex = Meta.Data$sex,
-  age_in_years = Meta.Data$age_in_years,
-  LRTI_adjudication = Meta.Data$LRTI_adjudication,
-  stringsAsFactors=F)
-
-# Restrict metadata_df to same patients used in patient_info
-metadata_df <- metadata_df_ALL %>%
-  filter(sample_name %in% patient_info_ALL$sample_name) %>%
-  filter(LRTI_adjudication %in% c("Definite", "No Evidence")) %>%
-  left_join(
-    patient_info_ALL %>%
-      dplyr::select(sample_name, patient_id),
-    by = "sample_name"
-  ) %>%
-  relocate(patient_id, .after = sample_name)
-
-
-
-
-
-
-# 1.3. Define workflow parameters
+# 1.2. Define workflow parameters
 
 
 # Define parameters
-Definite <- table(patient_info_ALL$LRTI_adjudication)["Definite"]
-No_Evidence <- table(patient_info_ALL$LRTI_adjudication)["No Evidence"]
+Definite <- table(metadata_df$LRTI_adjudication)["Definite"]
+No_Evidence <- table(metadata_df$LRTI_adjudication)["No Evidence"]
 npatients <- Definite + No_Evidence
 
 # Store parameters as data frame

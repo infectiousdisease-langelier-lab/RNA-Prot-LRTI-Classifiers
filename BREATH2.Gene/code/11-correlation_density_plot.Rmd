@@ -53,25 +53,7 @@ protein_mat <- read.csv(
   stringsAsFactors = F, check.names = F
 )
 
-# LASSO fold coefficients: gene workflow
-lasso_coefs_gene <- read.csv(
-  file.path(gene_results_dir, "lasso_fold_coefs.csv"),
-  stringsAsFactors = F
-)
-
-# LASSO fold coefficients: protein workflow
-lasso_coefs_prot <- read.csv(
-  file.path(prot_results_dir, "lasso_fold_coefs.csv"),
-  stringsAsFactors = F
-)
-
-# Metadata
-metadata_df <- read.csv(
-  file.path(gene_data_dir, "metadata_df_with_folds.csv"),
-  stringsAsFactors = F
-)
-
-
+names(protein_mat)[1] <- "sample_name"
 
 
 
@@ -111,28 +93,19 @@ cor_per_gene <- full_vsd %>%
     names_to = "sample_name",
     values_to = "expr_rna"
   ) %>%
-  inner_join(
-    metadata_df %>%
-      dplyr::select(
-        sample_name,
-        patient_id
-      ),
-    by = "sample_name"
+  mutate(
+    sample_name = as.character(sample_name)
   ) %>%
   inner_join(
     protein_mat %>%
-      { colnames(.)[1] <- "patient_id"; . } %>%
-      mutate(
-        patient_id = as.integer(patient_id)
-      ) %>%
       pivot_longer(
-        cols = -patient_id,
+        cols = -sample_name,
         names_to = "gene_symbol",
         values_to = "expr_protein"
       ) %>%
       filter(gene_symbol %in% shared_genes),
     by = c(
-      "patient_id",
+      "sample_name",
       "gene_symbol"
     )
   ) %>%

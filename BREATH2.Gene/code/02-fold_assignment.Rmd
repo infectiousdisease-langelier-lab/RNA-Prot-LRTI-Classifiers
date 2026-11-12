@@ -19,7 +19,7 @@ source("../../00-constants.R")
 
 
 
-# 2.1. Import metadata
+# 2.1. Import parameters
 
 
 # Number of No Evidence patients

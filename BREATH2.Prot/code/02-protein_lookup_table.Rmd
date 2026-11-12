@@ -68,7 +68,7 @@ protein_lookup_table_ALL <- protein_lookup_table_ALL %>%
 # Keep only annotated probes
 protein_mat_PROBEID <- protein_mat_PROBEID[, colnames(protein_mat_PROBEID) %in% protein_lookup_table_ALL$PROBEID]
 
-# Reorder lookup table to match the columns in protein_mat_ALL
+# Reorder lookup table to match the columns in protein_mat
 protein_lookup_table_ALL <- protein_lookup_table_ALL[match(colnames(protein_mat_PROBEID), protein_lookup_table_ALL$PROBEID), ]
 
 # Confirm alignment
@@ -93,19 +93,19 @@ rownames_tmp <- protein_mat_PROBEID_t$SYMBOL
 # 2.2c. Align tables
 
 
-# Define protein_mat_ALL
-protein_mat_ALL <- as.data.frame(t(protein_mat_PROBEID_t[, -1]))
-colnames(protein_mat_ALL) <- rownames_tmp
-rownames(protein_mat_ALL) <- patients_vector
+# Define protein_mat
+protein_mat <- as.data.frame(t(protein_mat_PROBEID_t[, -1]))
+colnames(protein_mat) <- rownames_tmp
+rownames(protein_mat) <- metadata_df$sample_name
 
 # Remove duplicate SYMBOLs in lookup table to match collapsed matrix
 protein_lookup_table <- protein_lookup_table_ALL %>%
-  filter(SYMBOL %in% colnames(protein_mat_ALL)) %>%
+  filter(SYMBOL %in% colnames(protein_mat)) %>%
   distinct(SYMBOL, .keep_all=T)
 
-# Match lookup table order to protein_mat_ALL column order
+# Match lookup table order to protein_mat column order
 protein_lookup_table <- protein_lookup_table[
-  match(colnames(protein_mat_ALL),
+  match(colnames(protein_mat),
   protein_lookup_table$SYMBOL), ]
 
 

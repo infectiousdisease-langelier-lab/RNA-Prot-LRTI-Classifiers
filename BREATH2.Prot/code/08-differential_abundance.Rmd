@@ -26,7 +26,7 @@ source("../../00-constants.R")
 
 # Import data
 metadata_df_with_folds <- read.csv(
-  file.path(prot_data_dir,"patient_info_with_folds.csv"),
+  file.path(prot_data_dir,"metadata_df_with_folds.csv"),
   stringsAsFactors=F
 )
 
@@ -37,8 +37,8 @@ protein_mat <- read.csv(
 
 # Align metadata and protein matrix
 metadata_df_with_folds <- metadata_df_with_folds %>%
-  filter(patient_id %in% rownames(protein_mat)) %>%
-  column_to_rownames("patient_id")
+  filter(sample_name %in% rownames(protein_mat)) %>%
+  column_to_rownames("sample_name")
 
 protein_mat <- protein_mat[
   rownames(metadata_df_with_folds),

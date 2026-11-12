@@ -24,7 +24,7 @@ source("../../00-constants.R")
 # 5.1. Import metadata & predictions
 
 
-patient_info_with_folds <- read.csv(
+metadata_df_with_folds <- read.csv(
   file.path(gene_data_dir, "metadata_df_with_folds.csv"),
   stringsAsFactors=F
 )
@@ -69,7 +69,7 @@ pred_list <- classifier_files %>%
           )
         ) %>%
         inner_join(
-          patient_info_with_folds %>%
+          metadata_df_with_folds %>%
             select(sample_name, fold),
           by = "sample_name"
         )
@@ -1148,30 +1148,30 @@ make_switch_plot <- function(
     stringsAsFactors=F
   ) %>%
     dplyr::select(
-      patient_id,
+      sample_name,
       pred_prot = pred
     ) %>%
     mutate(
-      patient_id = as.character(patient_id)
+      sample_name = as.character(sample_name)
     )
 
 
-  # Use metadata to connect gene sample_name to protein patient_id
+  # Use metadata to connect gene sample_name to protein sample_name
   combined_preds <- gene_preds %>%
     left_join(
       metadata_df_with_folds %>%
         dplyr::select(
           sample_name,
-          patient_id
+          sample_name
         ) %>%
         mutate(
-          patient_id = as.character(patient_id)
+          sample_name = as.character(sample_name)
         ),
       by = "sample_name"
     ) %>%
     inner_join(
       prot_preds,
-      by = "patient_id"
+      by = "sample_name"
     ) %>%
     mutate(
       switched = (pred_gene >= 0.5) != (pred_prot >= 0.5),
@@ -1182,7 +1182,7 @@ make_switch_plot <- function(
     ) %>%
     dplyr::select(
       sample_name,
-      patient_id,
+      sample_name,
       LRTI_adjudication,
       pred_gene,
       pred_prot,
@@ -1452,9 +1452,9 @@ switch_ISG15 <- make_switch_plot(
 delong_classifiers <- classifier_files$classifier
 
 # Start with shared patient IDs and outcomes
-delong_data <- patient_info_with_folds %>%
+delong_data <- metadata_df_with_folds %>%
   select(
-    patient_id,
+    sample_name,
     LRTI_adjudication
   )
 
@@ -1470,11 +1470,11 @@ for (i in seq_along(delong_classifiers)) {
     stringsAsFactors=F
   ) %>%
     inner_join(
-      patient_info_with_folds %>%
-        select(sample_name, patient_id),
+      metadata_df_with_folds %>%
+        select(sample_name, sample_name),
       by = "sample_name"
     ) %>%
-    select(patient_id, pred)
+    select(sample_name, pred)
 
   names(gene_preds)[2] <- paste0(
     "Gene: ",
@@ -1484,7 +1484,7 @@ for (i in seq_along(delong_classifiers)) {
   delong_data <- delong_data %>%
     left_join(
       gene_preds,
-      by = "patient_id"
+      by = "sample_name"
     )
 
   # Protein predictions
@@ -1492,7 +1492,7 @@ for (i in seq_along(delong_classifiers)) {
     file.path(prot_results_dir, prediction_file),
     stringsAsFactors=F
   ) %>%
-    select(patient_id, pred)
+    select(sample_name, pred)
 
   names(prot_preds)[2] <- paste0(
     "Protein: ",
@@ -1502,7 +1502,7 @@ for (i in seq_along(delong_classifiers)) {
   delong_data <- delong_data %>%
     left_join(
       prot_preds,
-      by = "patient_id"
+      by = "sample_name"
     )
 }
 
@@ -1510,7 +1510,7 @@ for (i in seq_along(delong_classifiers)) {
 # Keep the same patients across all classifiers
 prediction_cols <- setdiff(
   names(delong_data),
-  c("patient_id", "LRTI_adjudication")
+  c("sample_name", "LRTI_adjudication")
 )
 
 delong_data <- delong_data[

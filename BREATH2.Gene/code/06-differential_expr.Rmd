@@ -13,7 +13,6 @@ library(edgeR)
 library(ggplot2)
 library(ggrepel)
 library(limma)
-library(openxlsx)
 library(tibble)
 
 source("../../00-constants.R")

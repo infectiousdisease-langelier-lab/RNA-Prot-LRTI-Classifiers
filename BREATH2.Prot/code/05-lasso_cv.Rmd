@@ -24,8 +24,8 @@ source("../../00-constants.R")
 
 
 # Import data
-patient_info_with_folds <- read.csv(
-  file.path(prot_data_dir, "patient_info_with_folds.csv"),
+metadata_df_with_folds <- read.csv(
+  file.path(prot_data_dir, "metadata_df_with_folds.csv"),
   stringsAsFactors=F
 )
 
@@ -37,7 +37,7 @@ protein_mat <- read.csv(
 
 # Prepare inputs for LASSO
 X <- as.matrix(protein_mat)
-y <- patient_info_with_folds$LRTI_adjudication == "Definite"
+y <- metadata_df_with_folds$LRTI_adjudication == "Definite"
 
 
 
@@ -51,7 +51,7 @@ y <- patient_info_with_folds$LRTI_adjudication == "Definite"
 lasso_cv_outer_fold <- function(test_fold) {
   set.seed(project_seed + test_fold)
   
-  train <- patient_info_with_folds$fold != test_fold
+  train <- metadata_df_with_folds$fold != test_fold
   
   # Fit full lambda path
   fit <- glmnet::glmnet(
@@ -127,7 +127,7 @@ lasso_cv_outer_fold <- function(test_fold) {
 
 
 lasso_results <- lapply(
-  1:max(patient_info_with_folds$fold),
+  1:max(metadata_df_with_folds$fold),
   lasso_cv_outer_fold
 )
 
@@ -155,7 +155,7 @@ write.csv(
 
 stopifnot(
   all(lasso_fold_coefs$protein %in% protein_lookup_table$SYMBOL),
-  all(rownames(X) == patient_info_with_folds$patient_id)
+  all(rownames(X) == metadata_df_with_folds$sample_name)
 )
 
 
@@ -169,7 +169,7 @@ stopifnot(
 lasso_cv_fixed_n <- function(test_fold, target_n) {
   set.seed(project_seed + test_fold)
   
-  train <- patient_info_with_folds$fold != test_fold
+  train <- metadata_df_with_folds$fold != test_fold
   
   # Fit full lambda path
   fit <- glmnet::glmnet(
@@ -269,7 +269,7 @@ lasso_cv_fixed_n <- function(test_fold, target_n) {
 
 # 1 target classifier
 lasso_results_n1 <- lapply(
-  1:max(patient_info_with_folds$fold),
+  1:max(metadata_df_with_folds$fold),
   function(f) lasso_cv_fixed_n(
     f,
     target_n = 1
@@ -305,7 +305,7 @@ stopifnot(
 
 # 3 target LASSO
 lasso_results_n3 <- lapply(
-  1:max(patient_info_with_folds$fold),
+  1:max(metadata_df_with_folds$fold),
   function(f) lasso_cv_fixed_n(
     f,
     target_n = 3

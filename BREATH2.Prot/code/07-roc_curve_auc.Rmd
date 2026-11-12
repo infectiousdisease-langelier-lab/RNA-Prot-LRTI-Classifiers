@@ -23,8 +23,8 @@ source("../../00-constants.R")
 # 7.1. Import metadata & predictions
 
 
-patient_info_with_folds <- read.csv(
-  file.path(prot_data_dir, "patient_info_with_folds.csv"),
+metadata_df_with_folds <- read.csv(
+  file.path(prot_data_dir, "metadata_df_with_folds.csv"),
   stringsAsFactors=F
 )
 
@@ -67,9 +67,9 @@ pred_list <- classifier_files %>%
           )
         ) %>%
         inner_join(
-          patient_info_with_folds %>%
-            dplyr::select(patient_id, fold),
-          by = "patient_id"
+          metadata_df_with_folds %>%
+            dplyr::select(sample_name, fold),
+          by = "sample_name"
         )
     })
   )

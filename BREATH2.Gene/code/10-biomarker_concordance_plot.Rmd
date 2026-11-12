@@ -102,16 +102,16 @@ prepare_gene_concordance <- function(
 
   # Protein
   protein_gene_long <- protein_mat %>%
-    { colnames(.)[1] <- "patient_id"; . } %>%
+    { colnames(.)[1] <- "sample_name"; . } %>%
     mutate(
-      patient_id = as.character(patient_id)
+      sample_name = as.character(sample_name)
     ) %>%
     dplyr::select(
-      patient_id,
+      sample_name,
       all_of(selected_gene)
     ) %>%
     pivot_longer(
-      cols = -patient_id,
+      cols = -sample_name,
       names_to = "gene_symbol",
       values_to = "expr"
     ) %>%
@@ -122,7 +122,7 @@ prepare_gene_concordance <- function(
   # Merge RNA, protein, and metadata
   metadata_df %>%
     mutate(
-      patient_id = as.character(patient_id),
+      sample_name = as.character(sample_name),
       LRTI_group = recode(
         LRTI_adjudication,
         "Definite" = "LRTI",
@@ -135,7 +135,7 @@ prepare_gene_concordance <- function(
     ) %>%
     left_join(
       protein_gene_long,
-      by = c("patient_id", "gene_symbol")
+      by = c("sample_name", "gene_symbol")
     )
 }
 

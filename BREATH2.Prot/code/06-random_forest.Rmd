@@ -23,8 +23,8 @@ source("../../00-constants.R")
 # 6.1. Import Data for RF
 
 
-patient_info_with_folds <- read.csv(
-  file.path(prot_data_dir, "patient_info_with_folds.csv"),
+metadata_df_with_folds <- read.csv(
+  file.path(prot_data_dir, "metadata_df_with_folds.csv"),
   stringsAsFactors=F
 )
 
@@ -32,8 +32,6 @@ protein_mat <- read.csv(
   file.path(prot_data_dir, "protein_mat.csv"), 
   stringsAsFactors=F, row.names=1, check.names=F
 )
-
-patient_info_with_folds$patient_id <- as.character(patient_info_with_folds$patient_id)
 
 lasso_fold_coefs <- read.csv(
   file.path(prot_results_dir, "lasso_fold_coefs.csv"),
@@ -50,8 +48,8 @@ lasso_fold_coefs_n1 <- read.csv(
   stringsAsFactors=F
 )
 
-y <- as.factor(patient_info_with_folds$LRTI_adjudication)
-patient_info_with_folds <- as.data.frame(patient_info_with_folds)
+y <- as.factor(metadata_df_with_folds$LRTI_adjudication)
+metadata_df_with_folds <- as.data.frame(metadata_df_with_folds)
 
 
 
@@ -70,7 +68,7 @@ lassoRF_cv_outer_fold <- function(test_fold, selected_lasso_coefs) {
 
   X <- protein_mat[, keep, drop = FALSE]
 
-  train <- patient_info_with_folds$fold != test_fold
+  train <- metadata_df_with_folds$fold != test_fold
 
   rf <- randomForest(X[train, , drop = FALSE], y[train], ntree = ntrees)
 
@@ -92,16 +90,16 @@ collect_preds <- function(cv_list) {
   cv_list %>%
     lapply(function(x) {
       data.frame(
-        patient_id = rownames(protein_mat)[
-        patient_info_with_folds$fold == x$test_fold],
+        sample_name = rownames(protein_mat)[
+        metadata_df_with_folds$fold == x$test_fold],
         pred = x$pred)
     }) %>%
     bind_rows() %>%
     dplyr::left_join(
-      dplyr::select(patient_info_with_folds, patient_id, LRTI_adjudication),
-      by = "patient_id"
+      dplyr::select(metadata_df_with_folds, sample_name, LRTI_adjudication),
+      by = "sample_name"
     ) %>%
-    dplyr::relocate(LRTI_adjudication, .after = patient_id)
+    dplyr::relocate(LRTI_adjudication, .after = sample_name)
 }
 
 
@@ -112,7 +110,7 @@ collect_preds <- function(cv_list) {
 # 6.4. Run RF for all 5 classifiers
 
 
-max_fold <- max(patient_info_with_folds$fold)
+max_fold <- max(metadata_df_with_folds$fold)
 
 
 # Full LASSO (lanbda.1se)

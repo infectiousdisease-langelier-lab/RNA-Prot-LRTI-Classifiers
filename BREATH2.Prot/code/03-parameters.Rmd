@@ -1,5 +1,5 @@
 ---
-title: "03-patient_info_table"
+title: "03-metadata_df_table"
 output: 
   html_notebook:
     toc: true
@@ -15,20 +15,8 @@ source("../../00-constants.R")
 
 
 
-# 3.1. Subset both datasets to Definite/No Evidence
+# 3.1. Export protein matrix
 
-
-# Include only Definite and No Evidence patients
-patient_info <- patient_info_ALL[
-  patient_info_ALL$LRTI_adjudication %in% 
-    c("Definite", "No Evidence"), 
-]
-
-# Includes only the protein matrix for Definite and No Evidence patients
-protein_mat <- protein_mat_ALL[
-  match(patient_info$patient_id, 
-    rownames(protein_mat_ALL)), 
-]
 
 write.csv(
   protein_mat,
@@ -45,9 +33,9 @@ write.csv(
 
 
 # Define parameters
-Definite <- table(patient_info$LRTI_adjudication)["Definite"]
-No_Evidence <- table(patient_info$LRTI_adjudication)["No Evidence"]
-npatients <- nrow(patient_info)
+Definite <- table(metadata_df$LRTI_adjudication)["Definite"]
+No_Evidence <- table(metadata_df$LRTI_adjudication)["No Evidence"]
+npatients <- nrow(metadata_df)
 nproteins <- ncol(protein_mat)
 
 # Store parameters as data frame

@@ -72,3 +72,50 @@ full_lasso_color <- "#CC79A7"
 
 three_target_color <- "#56B4E9"
 
+
+
+# Packages
+
+
+# Paste all of the below into R console
+
+
+# CRAN packages
+cran_packages <- c(
+  "dplyr",
+  "magrittr",
+  "rsample",
+  "ggplot2",
+  "glmnet",
+  "tibble",
+  "randomForest",
+  "pROC",
+  "ggrepel",
+  "msigdbr",
+  "stringr",
+  "tidyr",
+  "patchwork"
+)
+
+# Bioconductor packages
+bioc_packages <- c(
+  "DESeq2",
+  "edgeR",
+  "limma",
+  "clusterProfiler",
+  "AnnotationDbi",
+  "SomaScan.db"
+)
+
+# Install CRAN packages
+install.packages(cran_packages)
+
+# Install BiocManager if necessary
+if (!requireNamespace("BiocManager", quietly = TRUE)) {
+  install.packages("BiocManager")
+}
+
+# Install Bioconductor packages
+BiocManager::install(bioc_packages)
+
+

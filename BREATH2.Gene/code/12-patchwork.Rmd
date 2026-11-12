@@ -44,7 +44,7 @@ p2C <- readRDS(
 p2A <- p2A +
   theme(
     aspect.ratio=1,
-    plot.margin=margin(
+    plot.margin=ggplot2::margin(
       t=10,
       r=10,
       b=40,
@@ -56,9 +56,9 @@ p2B <- p2B +
   theme(
     aspect.ratio=1,
     plot.caption=element_text(
-      margin=margin(t=-15)
+      margin=ggplot2::margin(t=-15)
     ),
-    plot.margin=margin(
+    plot.margin=ggplot2::margin(
       t=300,
       r=15,
       b=10,
@@ -78,7 +78,7 @@ figure_2 <- figure_2 +
     heights=c(6.2, 6.8)
   ) &
   theme(
-    plot.margin=margin(
+    plot.margin=ggplot2::margin(
       t=10,
       r=20,
       b=10,
@@ -278,7 +278,7 @@ figure_4 <- figure_4 +
     heights = c(1, 1)
   ) &
   theme(
-    plot.margin = margin(
+    plot.margin = ggplot2::margin(
       t = 15,
       r = 35,
       b = 15,
