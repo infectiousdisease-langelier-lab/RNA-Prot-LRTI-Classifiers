@@ -4,4 +4,4 @@ raw_data/
 **/.Rproj.user
 .Rproj.user
 *.RData
-.RDataTmp
+.RDataTmp*
