@@ -46,7 +46,7 @@
 
 1. `vap_soma_normalized.csv` contains patient_id (n=151) and SomaScan protein matrix with 7596 PROBEIDs. PHI filtered out to create protein_mat_PROBEID, which is compressed to protein_mat_ALL, which is then subsetted to protein_mat with n=105 patient_ids.
 
-2. 2.  `metadata_JCI_mNGS_hits_added_06122026.csv` features metadata as well as the pathogenic viral and bacterial hits for all patient samples. Restricted to n=105 patients.
+2. `metadata_JCI_mNGS_hits_added_06122026.csv` features metadata as well as the pathogenic viral and bacterial hits for all patient samples. Restricted to n=105 patients.
 
 
 
